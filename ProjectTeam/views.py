@@ -1,7 +1,12 @@
 from django.shortcuts import render
 from django.http import HttpResponseRedirect
+from .models import User
 
 from .forms import Login
+
+def login(request):
+    users = User.objects.all()
+    return render(request, 'ProjectTeam/templates/login_old.html', {'users':users})
 
 def get_name(request):
     # if this is a POST request we need to process the form data

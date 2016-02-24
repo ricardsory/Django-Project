@@ -10,7 +10,7 @@ class Rubrica(models.Model):
 
 
 class Pregunta(models.Model):
-    p_enc_id = models.ForeignKey(Encuesta)
+    p_enc_id = models.ForeignKey(Rubrica)
     question = models.CharField(max_length=200)
 
 class Opcion(models.Model):
